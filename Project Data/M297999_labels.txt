@@ -1,0 +1,21 @@
+****** PSID DATA CENTER ************************* 
+****** Variable labels for JobID = 297999 ******* 
+
+Variable    Labels
+
+ER30001    CHILD: 1968 INTERVI_EW NUMBER           
+ER30002    CHILD: PERSON NUMBER 68                 
+PCGID_97   PCG 1997: 1968 INTERVIEW NUMBER         
+PCGPN_97   PCG 1997: PERSON NUMBER 68              
+OCGID_97   OCG 1997: 1968 INTERVIEW NUMBER         
+OCGPN_97   OCG 1997: PERSON NUMBER 68              
+PCGID_02   PCG 2002: 1968 INTERVIEW NUMBER         
+PCGPN_02   PCG 2002: PERSON NUMBER 68              
+OCGID_02   OCG 2002: 1968 INTERVIEW NUMBER         
+OCGPN_02   OCG 2002: PERSON NUMBER 68              
+PCGID_07   PCG 2007: 1968 INTERVIEW NUMBER         
+PCGPN_07   PCG 2007: PERSON NUMBER 68              
+OCGID_07   OCG 2007: 1968 INTERVIEW NUMBER         
+OCGPN_07   OCG 2007: PERSON NUMBER 68              
+
+*** End of labels ******************************* 
