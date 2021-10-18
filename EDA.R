@@ -79,7 +79,11 @@ nrow(HouseholdData_BMO)
 
 PCG_Child_Map <- fread("https://raw.githubusercontent.com/carolinelee78/QTM-302W/main/Project%20Data/M298010.csv")
 
-PCG_Child_Map$PSID_ID <- (PCG_Child_Map$ER30001 * 1000) + PCG_Child_Map$ER30002
+PCG_Child_Map <- select(PCG_Child_Map, "ER30001", "ER30002", "PCGID_97", "PCGPN_97")
+
+PCG_Child_Map$Child_PSID_ID <- (PCG_Child_Map$ER30001 * 1000) + PCG_Child_Map$ER30002
+
+PCG_Child_Map$Parent_PSID_ID <- (PCG_Child_Map$PCGID_97 * 1000) + PCG_Child_Map$PCGPN_97
 
 head(PCG_Child_Map)
 
@@ -123,7 +127,6 @@ ggplot(data=subset(HouseholdData, !is.na(Q2A29A)), aes(x=Q2A29A)) +
   geom_bar(stat="count") + 
   labs(title = "Being a parent is hard", x = "Being a parent is harder than expected", y = "Count") +
   scale_x_discrete(breaks = 1:5, labels=c("Not at all true","Somewhat true", "Moderately true", "Very true", "Completely true")) 
-
 
 # Feel trapped as parent (Q2A29B): "Thinking about your child(ren), please indicate on a scale from 
 # 1 (not at all true) to 5 (completely true) the number that best describes how true each statement is. 
@@ -312,3 +315,7 @@ ggplot(data=subset(HouseholdData, !is.na(TA171974)), aes(x=TA171974)) +
   geom_histogram(binwidth=1, color="black", fill="white") + 
   scale_x_continuous(breaks = seq(1, 6, by = 1)) + 
   labs(title = "Psychological Well-being (TIAS 2017)", x = "Score on the Psychological Well-being MIDUS Subscale", y = "Count") 
+
+### analysis 
+
+
